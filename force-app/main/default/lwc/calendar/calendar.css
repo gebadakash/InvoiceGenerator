@@ -1,0 +1,47 @@
+.calendar {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .days {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: hsl(43, 100%, 88%);
+  }
+  
+  th,
+  td {
+    padding: 8px;
+    border: 1px solid #060606;
+  }
+ 
+  
+  td {
+    cursor: pointer;
+  }
+  
+  .inactive {
+    color: #ccc;
+    cursor: default;
+  }
+  td.current {
+    background-color: rgb(196, 254, 248); /* Change the background color to highlight the current date */
+  }
+  
+.calendar .day{
+  background-color: #ff6d63;
+}
+.calendar .day2{
+  background-color: #9cefc4;
+}
+td.selected {
+  background-color: lightblue; /* Change the background color to highlight the selected date */
+}

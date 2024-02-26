@@ -1,0 +1,56 @@
+.app-container {
+    min-height: 100vh;
+    background: #fff;
+    color: #9d9d9d;
+    padding-bottom: 1rem
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box
+}
+
+footer,
+header {
+    grid-area: header;
+    text-align: center;
+    margin: 0;
+    padding: .5em;
+    background: #222;
+    color: #f8f4f4;
+    font-size: 1.5em
+}
+
+.bg-primary {
+    background-color: #007bff
+}
+
+.bg-warning {
+    background-color: #dd9105
+}
+
+.bg-success {
+    background-color: #28a745
+}
+
+.bg-danger {
+    background-color: #dc3545
+}
+
+.white-color {
+    color: #fff
+}
+
+.space {
+    justify-content: space-between
+}
+
+.lgc-bg {
+    background-color: #0f4c81
+}
+
+.label-text {
+    color: #fff !important;
+    font-size: 1rem
+}

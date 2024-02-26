@@ -1,0 +1,24 @@
+<template>
+  <div>
+    <div class="pdf-container">
+      <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading PDF..."></lightning-spinner>
+      </template>
+      <iframe if:true={showPDF} src={pdfURL} title="PDF Viewer"></iframe>
+    </div>
+    <div class="button-container">
+      <div class="button-wrapper">
+        <lightning-button class="download_button" label="Download" title="Download PDF"
+          onclick={handleDownload}></lightning-button>
+      </div>
+      <div class="button-wrapper">
+        <lightning-button class="save_button" label="Save" title="Save as Attachment"
+          onclick={handleSave}></lightning-button>
+      </div>
+      <div class="button-wrapper">
+        <lightning-button class="mail_button" label="Mail Invoice" title="Mail with Attachment"
+          onclick={sendMail}></lightning-button>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <div class="container">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading PDF"></lightning-spinner>
+        </template>
+        <iframe src={pdfUrl} width="100%" height="600px"></iframe>
+        <div class="button-container">
+            <lightning-button variant="brand-outline" label={buttonLabel.saveLabel} icon-name="utility:download" onclick={savePdf}></lightning-button>
+            <lightning-button variant="brand-outline" label={buttonLabel.emailLabel} icon-name="utility:email" onclick={sendEmail}></lightning-button>
+        </div>
+    </div>
+</template>

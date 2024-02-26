@@ -1,0 +1,36 @@
+<template>
+    <lightning-card>
+        <div class="calendar">
+            <div class="header">
+                <lightning-button-icon icon-name="utility:left" alternative-text="Previous Month"
+                    onclick={handlePreviousMonth}></lightning-button-icon>
+                <h2>{month} {year}</h2>
+                <lightning-button-icon icon-name="utility:right" alternative-text="Next Month"
+                    onclick={handleNextMonth}></lightning-button-icon>
+            </div>
+            <table class="days">
+                <thead>
+                    <tr>
+                        <th class="day">Sun</th>
+                        <th class="day2">Mon</th>
+                        <th class="day2">Tue</th>
+                        <th class="day2">Wed</th>
+                        <th class="day2">Thu</th>
+                        <th class="day2">Fri</th>
+                        <th class="day2">Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={calendarDays} for:item="week">
+                        <tr key={week.id}>
+                            <template for:each={week.days} for:item="day">
+                                <td key={day.date} class={day.class} data-date={day.date} onclick={handleDateClick}>{day.day}</td>
+
+                            </template>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

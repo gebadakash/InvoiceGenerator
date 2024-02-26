@@ -1,0 +1,17 @@
+<template>
+    <div class="calendar">
+        <div class="header">
+            <div class="month">{currentMonth}</div>
+        </div>
+        <div class="weekdays">
+            <template for:each={weekdays} for:item="weekday">
+                <div key={weekday} class="weekday">{weekday}</div>
+            </template>
+        </div>
+        <div class="days">
+            <template for:each={calendarDays} for:item="day">
+                <div key={day} class={day.class}>{day.date}</div>
+            </template>
+        </div>
+    </div>
+</template>
